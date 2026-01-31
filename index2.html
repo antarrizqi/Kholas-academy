@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3d2817" />
+    <title>Kholas Academy - Islamic E-Learning dan komunitas muslim</title>
+    <meta
+      name="description"
+      content="Program e-course berkurikulum yang diampu oleh Ustadz berkompeten. Pelajari ilmu Islam dengan metode yang sistematis dan terstruktur."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3d2817",
+              secondary: "#d4a574",
+              accent: "#5a7a6e",
+              cream: "#f5f1ed",
+              "dark-charcoal": "#2a2a2a",
+            },
+            fontFamily: {
+              sans: [
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Oxygen",
+                "Ubuntu",
+                "Cantarell",
+                "sans-serif",
+              ],
+              serif: ["Georgia", "Garamond", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f1ed;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4a574;
+        border-radius: 5px;
+      }
+
+      /* Smooth transitions */
+      * {
+        transition-property:
+          color, background-color, border-color, text-decoration-color, fill,
+          stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(61, 40, 23, 0.95) 0%,
+          rgba(212, 165, 116, 0.85) 100%
+        );
+      }
+
+      .btn-primary {
+        @apply px-6 py-3 bg-primary text-cream rounded-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+      }
+
+      .btn-secondary {
+        @apply px-6 py-3 bg-primary text-cream rounded-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+      }
+
+      .card-hover {
+        @apply transform hover:-translate-y-2 transition-all duration-300;
+      }
+    </style>
+  </head>
+  <body class="bg-cream text-dark-charcoal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 bg-primary rounded-full flex items-center justify-center"
+            >
+              <span class="text-cream font-bold">K</span>
+            </div>
+            <span class="font-bold text-primary">Kholas Academy</span>
+          </div>
+
+          <div id="hamburger" class="md:hidden cursor-pointer">
+            <div class="space-y-1">
+              <div class="w-6 h-0.5 bg-primary"></div>
+              <div class="w-6 h-0.5 bg-primary"></div>
+              <div class="w-6 h-0.5 bg-primary"></div>
+            </div>
+          </div>
+
+          <div id="navMenu" class="hidden md:flex items-center gap-8">
+            <a
+              href="#programs"
+              class="text-dark-charcoal hover:text-primary font-medium"
+              >Program</a
+            >
+            <!-- <a
+              href="about.html"
+              class="text-dark-charcoal hover:text-primary font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#impact"
+              class="text-dark-charcoal hover:text-primary font-medium"
+              >Dampak Sosial</a
+            > -->
+            <a href="contact.html" class="btn-primary">Hubungi Kami</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4">
+          <a
+            href="#programs"
+            class="block py-2 text-dark-charcoal hover:text-primary"
+            >Program</a
+          >
+          <!-- <a
+            href="about.html"
+            class="block py-2 text-dark-charcoal hover:text-primary"
+            >Tentang</a
+          >
+          <a
+            href="#impact"
+            class="block py-2 text-dark-charcoal hover:text-primary"
+            >Dampak Sosial</a
+          > -->
+          <a href="contact.html" class="block mt-3 btn-primary text-center"
+            >Hubungi Kami</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <section style="background: linear-gradient(135deg, #8b735b 0%, #6d5843 100%);" class="min-h-[90vh] flex items-center overflow-hidden">
+  <div class="container mx-auto px-6 py-24 md:flex md:items-center md:justify-between">
+    
+    <div class="md:w-1/2 mb-12 md:mb-0">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+        Tempat terbaik untuk <br> belajar agama
+      </h1>
+      <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-lg font-light">
+        Kholas Academy adalah kursus agama Islam yang terstruktur. Belajar dari ustad yang berpengalaman dan berkontribusi pada agama.
+      </p>
+      
+      <div class="flex items-center gap-10">
+        <button 
+          onclick="scrollToSection('programs')"
+          class="group relative text-white font-medium tracking-wide py-2 transition duration-300">
+          Lihat Program
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </button>
+        
+        <button 
+          onclick="window.location.href = 'contact.html'"
+          class="px-10 py-3 border border-white/40 text-white rounded-lg font-medium transition-all duration-300 hover:bg-white hover:text-[#6d5843] hover:border-white shadow-sm active:scale-95">
+          Hubungi Kami
+        </button>
+      </div>
+    </div>
+
+    <div class="md:w-1/2 flex justify-end">
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-black/10 rounded-2xl blur-xl group-hover:blur-2xl transition duration-500"></div>
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA5UpX_wizyzR9cSv-CbRLWcjcaR2bTMyjcrqoB8pfZQ&s" 
+          alt="Islamic Learning Community" 
+          class="relative w-full max-w-xl h-[450px] md:h-[520px] object-cover rounded-2xl shadow-2xl transition duration-500"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+   <!-- end hero section -->
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary mb-4">
+            3 Program Utama kami
+          </h2>
+          <p class="text-lg text-dark-charcoal/70 max-w-2xl mx-auto">
+            Belajar Islam dari dasar hingga tingkat pengambilan sanad dengan
+            asatidz berpengalaman
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Program 1 -->
+          <div
+            class="card-hover bg-cream border-2 border-primary/20 rounded-2xl p-8 hover:shadow-lg"
+          >
+            <div
+              class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4"
+            >
+              <span class="text-xl">📚</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">
+              Bahasa Arab Fundamental
+            </h3>
+            <p class="text-dark-charcoal/70 mb-6">
+              Reading, grammar, dan conversation dalam konteks Islam. Gateway
+              untuk program-program lain.
+            </p>
+            <div class="space-y-2 text-sm text-dark-charcoal/60 mb-6">
+              <p><strong>Durasi:</strong> 12 minggu</p>
+              <p><strong>Level:</strong> pemula</p>
+            </div>
+          <!-- <button
+              onclick="showProgramDetail(1)"
+              class="w-full btn-primary text-center"
+            >
+              Lihat Detail -->
+            </button>
+          </div>
+
+          <!-- Program 2 -->
+          <div
+            class="card-hover bg-cream border-2 border-secondary/20 rounded-2xl p-8 hover:shadow-lg"
+          >
+            <div
+              class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4"
+            >
+              <span class="text-xl">🕌</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">
+             Bacaan quran
+            </h3>
+            <p class="text-dark-charcoal/70 mb-6">
+              Tajwid.
+            </p>
+            <div class="space-y-2 text-sm text-dark-charcoal/60 mb-6">
+              <p><strong>Durasi:</strong> 16 minggu</p>
+              <!-- <p><strong>Harga:</strong> Rp 2.000.000</p> -->
+              <p><strong>Level:</strong> pemula</p>
+            </div>
+            <!-- <button
+              onclick="showProgramDetail(2)"
+              class="w-full btn-primary text-center"
+            >
+              Lihat Detail -->
+            </button>
+          </div>
+
+          <!-- Program 3 -->
+          <div
+            class="card-hover bg-cream border-2 border-accent/20 rounded-2xl p-8 hover:shadow-lg"
+          >
+            <div
+              class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4"
+            >
+              <span class="text-xl">⚖️</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">
+              Fiqh islam
+            </h3>
+            <p class="text-dark-charcoal/70 mb-6">
+             fiqih ibadah, muamalah, pernikahan, 
+            </p>
+            <div class="space-y-2 text-sm text-dark-charcoal/60 mb-6">
+              <p><strong>Durasi:</strong> 14 minggu</p>
+              <!-- <p><strong>Harga:</strong> Rp 1.800.000</p> -->
+              <p><strong>Level:</strong> pemula</p>
+            </div>
+            <!-- <button
+              onclick="showProgramDetail(3)"
+              class="w-full btn-primary text-center"
+            >
+              Lihat Detail -->
+            </button>
+          </div>
+
+          <!-- Program 4 -->
+          <!-- <div
+            class="card-hover bg-cream border-2 border-primary/20 rounded-2xl p-8 hover:shadow-lg"
+          >
+            <div
+              class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4"
+            >
+              <span class="text-xl">📖</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">
+              Hadith Sciences
+            </h3>
+            <p class="text-dark-charcoal/70 mb-6">
+              Understanding hadith authenticity, sanad, dan Islamic
+              jurisprudence sources.
+            </p>
+            <div class="space-y-2 text-sm text-dark-charcoal/60 mb-6">
+              <p><strong>Durasi:</strong> 14 minggu</p>
+              <p><strong>Harga:</strong> Rp 2.000.000</p>
+              <p><strong>Level:</strong> Advanced</p>
+            </div>
+            <button
+              onclick="showProgramDetail(4)"
+              class="w-full btn-primary text-center"
+            >
+              Lihat Detail
+            </button>
+          </div> -->
+
+          <!-- Program 5 -->
+          <!-- <div
+            class="card-hover bg-cream border-2 border-secondary/20 rounded-2xl p-8 hover:shadow-lg"
+          >
+            <div
+              class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4"
+            >
+              <span class="text-xl">✨</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-3">
+              Islamic Theology & Creed (Aqidah)
+            </h3>
+            <p class="text-dark-charcoal/70 mb-6">
+              Foundation of Islamic beliefs, philosophy, dan Islamic worldview.
+            </p>
+            <div class="space-y-2 text-sm text-dark-charcoal/60 mb-6">
+              <p><strong>Durasi:</strong> 12 minggu</p>
+              <p><strong>Harga:</strong> Rp 1.500.000</p>
+              <p><strong>Level:</strong> Beginner</p>
+            </div>
+            <button
+              onclick="showProgramDetail(5)"
+              class="w-full btn-primary text-center"
+            >
+              Lihat Detail
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Kholas Section -->
+    <section class="py-20 bg-primary text-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16">
+          Mengapa Memilih Kholas Academy?
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-5xl mb-4">👨‍🏫</div>
+            <h3 class="text-xl font-bold mb-3">Asatidz Berpengalaman</h3>
+            <p class="text-cream/80">
+              Belajar dari ustad yang memiliki pengalaman
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold mb-3">Komunitas islami</h3>
+            <p class="text-cream/80">
+              Belajar bersama dengan motivasi yang sama
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl mb-4">📚</div>
+            <h3 class="text-xl font-bold mb-3">Kurikulum Terstruktur</h3>
+            <p class="text-cream/80">
+              Program dari pemula sampai menengah
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl mb-4">🌍</div>
+            <h3 class="text-xl font-bold mb-3"> Sosial</h3>
+            <p class="text-cream/80">
+              Belajar sekaligus berkontribusi untuk masyarakat
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Impact Section -->
+    <!-- <section id="impact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary mb-4">
+            Dampak Sosial Kami
+          </h2>
+          <p class="text-lg text-dark-charcoal/70">
+            Kholas Academy tidak hanya tempat belajar, tapi juga tempat berbagi
+            dan memberikan dampak
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <img
+              src="social-impact.jpg"
+              alt="Social Impact"
+              class="rounded-2xl w-full h-96 object-cover shadow-lg"
+            />
+          </div>
+          <div class="space-y-8">
+            <div class="border-l-4 border-secondary pl-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Beasiswa Pendidikan
+              </h3>
+              <p class="text-dark-charcoal/70">
+                Memberikan 50 beasiswa untuk generasi muda yang ingin belajar
+                Islam tapi terkendala finansial
+              </p>
+              <div class="mt-3 text-secondary font-bold">
+                Target 2024: Rp 100 Juta
+              </div>
+            </div>
+
+            <div class="border-l-4 border-accent pl-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Program Mengajar Sosial
+              </h3>
+              <p class="text-dark-charcoal/70">
+                Member Kholas mengajar Islam ke anak-anak dan remaja di daerah
+                yang membutuhkan
+              </p>
+              <div class="mt-3 text-accent font-bold">
+                50+ peserta per bulan
+              </div>
+            </div>
+
+            <div class="border-l-4 border-secondary pl-6">
+              <h3 class="text-2xl font-bold text-primary mb-2">
+                Perpustakaan Digital Gratis
+              </h3>
+              <p class="text-dark-charcoal/70">
+                Menyediakan 500+ resource pembelajaran Islam gratis untuk semua
+                kalangan
+              </p>
+              <div class="mt-3 text-secondary font-bold">
+                Akses gratis selamanya
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-primary to-secondary text-cream rounded-2xl p-12 text-center"
+        >
+          <h3 class="text-3xl font-bold mb-4">Dukung Misi Kami</h3>
+          <p class="text-lg text-cream/90 mb-8 max-w-2xl mx-auto">
+            Setiap kontribusi Anda membantu kami memberikan akses pendidikan
+            Islam berkualitas untuk generasi muda
+          </p>
+          <button
+            onclick="window.location.href = 'contact.html'"
+            class="btn-secondary"
+          >
+            Kirim Donasi Sekarang
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-primary text-center mb-16">
+          Testimoni Peserta
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 border-2 border-primary/10">
+            <div class="flex gap-2 mb-4">
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+            </div>
+            <p class="text-dark-charcoal/80 mb-6">
+              "Kholas Academy membuat saya bisa belajar Islam dengan serius
+              tanpa harus meninggalkan pekerjaan. Komunitas di sini benar-benar
+              mendukung dan inspiring."
+            </p>
+            <p class="font-bold text-primary">Fatima, 26 - Jakarta</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border-2 border-secondary/30">
+            <div class="flex gap-2 mb-4">
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+            </div>
+            <p class="text-dark-charcoal/80 mb-6">
+              "Program Bahasa Arab di Kholas sangat terstruktur. Dari yang basic
+              sampai bisa membaca kitab, semuanya dijelaskan dengan detail dan
+              asik."
+            </p>
+            <p class="font-bold text-primary">Ahmad, 23 - Bandung</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border-2 border-accent/20">
+            <div class="flex gap-2 mb-4">
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+              <span class="text-yellow-400">⭐</span>
+            </div>
+            <p class="text-dark-charcoal/80 mb-6">
+              "Yang terbaik adalah Kholas tidak hanya mengajar, tapi juga
+              mendorong kami untuk memberikan dampak sosial. Sangat sejalan
+              dengan nilai-nilai Islam saya."
+            </p>
+            <p class="font-bold text-primary">Zainab, 28 - Surabaya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-primary text-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-5xl font-bold mb-2">500+</div>
+            <p class="text-cream/80">Peserta Aktif</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold mb-2">5</div>
+            <p class="text-cream/80">Program Berkualitas</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold mb-2">50+</div>
+            <p class="text-cream/80">Instruktur Berpengalaman</p>
+          </div>
+          <div>
+            <div class="text-5xl font-bold mb-2">100%</div>
+            <p class="text-cream/80">Kepuasan Peserta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">OUR TEAM</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/200x200">
+          <div class="w-full">
+            <h2 class="title-font font-medium text-lg text-gray-900">Alper Kamu</h2>
+            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/201x201">
+          <div class="w-full">
+            <h2 class="title-font font-medium text-lg text-gray-900">Holden Caulfield</h2>
+            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+          <div class="w-full">
+            <h2 class="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
+            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/203x203">
+          <div class="w-full">
+            <h2 class="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
+            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-secondary to-primary text-cream"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+         Mulai Perjalanan Ilmu Anda
+        </h2>
+        <p class="text-xl text-cream/90 mb-8">
+          Bergabunglah dengan Kholas Academy dan mulai perjalanan menuntut ilmu agama Islam.
+        </p>
+        <button
+          onclick="window.location.href = 'contact.html'"
+          class="px-8 py-4 bg-cream text-primary rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all"
+        >
+          Daftar Sekarang
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-charcoal text-cream py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-bold text-lg mb-4">Kholas Academy</h3>
+            <p class="text-cream/70">
+              Platform pembelajaran Islam
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Program</h4>
+            <ul class="space-y-2 text-cream/70">
+              <li>
+                <a href="#programs" class="hover:text-secondary">Bahasa Arab</a>
+              </li>
+              <li>
+                <a href="#programs" class="hover:text-secondary"
+                  >Quranic Studies</a
+                >
+              </li>
+              <li><a href="#programs" class="hover:text-secondary">Fiqh</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Perusahaan</h4>
+            <ul class="space-y-2 text-cream/70">
+              <li>
+                <a href="about.html" class="hover:text-secondary">Tentang</a>
+              </li>
+              <li>
+                <a href="#impact" class="hover:text-secondary">Dampak Sosial</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-secondary">Hubungi</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Kontak</h4>
+            <p class="text-cream/70 mb-2">Email: info@kholas.academy</p>
+            <p class="text-cream/70 mb-2">WhatsApp: +62 812-3456-7890</p>
+            <p class="text-cream/70">Jam Kerja: 09:00 - 17:00 WIB</p>
+          </div>
+        </div>
+
+        <div class="border-t border-cream/20 pt-8">
+          <div class="text-center text-cream/60">
+            <p>
+              &copy; 2025 Kholas Academy. Semua hak dilindungi. |
+              <a href="#" class="hover:text-secondary">Kebijakan Privasi</a> |
+             
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Program Detail Modal -->
+    <div
+      id="programModal"
+      class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto"
+      >
+        <div
+          class="sticky top-0 bg-primary text-cream p-6 flex justify-between items-center"
+        >
+          <h2 id="modalTitle" class="text-2xl font-bold">Program Detail</h2>
+          <button
+            onclick="closeProgramDetail()"
+            class="text-2xl hover:opacity-70"
+          >
+            ✕
+          </button>
+        </div>
+        <div id="modalContent" class="p-6 space-y-4">
+          <!-- Content will be inserted here -->
+        </div>
+        <div class="sticky bottom-0 bg-cream/50 p-6 flex gap-4">
+          <button
+            onclick="closeProgramDetail()"
+            class="flex-1 px-4 py-2 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10"
+          >
+            Tutup
+          </button>
+          <button
+            onclick="window.location.href = 'contact.html'"
+            class="flex-1 btn-primary text-center"
+          >
+            Daftar Program
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

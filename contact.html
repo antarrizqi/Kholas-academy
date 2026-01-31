@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3d2817">
+    <title>Hubungi Kholas Academy</title>
+    <meta name="description" content="Hubungi Kholas Academy untuk informasi program, konsultasi, atau untuk mengirim donasi. Kami siap membantu perjalanan belajar Islam Anda.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3d2817',
+                        secondary: '#d4a574',
+                        accent: '#5a7a6e',
+                        cream: '#f5f1ed',
+                        'dark-charcoal': '#2a2a2a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f1ed;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a574;
+            border-radius: 5px;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(61, 40, 23, 0.95) 0%, rgba(212, 165, 116, 0.85) 100%);
+        }
+        
+        .btn-primary {
+            @apply px-6 py-3 bg-primary text-cream rounded-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+        }
+        
+        input, textarea {
+            @apply border-2 border-primary/20 rounded-lg px-4 py-3 focus:outline-none focus:border-secondary transition-colors;
+        }
+        
+        input:focus, textarea:focus {
+            @apply border-secondary;
+        }
+    </style>
+</head>
+<body class="bg-cream text-dark-charcoal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-cream font-bold">K</span>
+                    </div>
+                    <a href="index.html" class="font-bold text-primary">Kholas Academy</a>
+                </div>
+                
+                <div id="hamburger" class="md:hidden cursor-pointer">
+                    <div class="space-y-1">
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                    </div>
+                </div>
+                
+                <div id="navMenu" class="hidden md:flex items-center gap-8">
+                    <a href="index.html#programs" class="text-dark-charcoal hover:text-primary font-medium">Program</a>
+                    <a href="about.html" class="text-dark-charcoal hover:text-primary font-medium">Tentang</a>
+                    <a href="index.html#impact" class="text-dark-charcoal hover:text-primary font-medium">Dampak Sosial</a>
+                    <a href="contact.html" class="btn-primary">Hubungi Kami</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html#programs" class="block py-2 text-dark-charcoal hover:text-primary">Program</a>
+                <a href="about.html" class="block py-2 text-dark-charcoal hover:text-primary">Tentang</a>
+                <a href="index.html#impact" class="block py-2 text-dark-charcoal hover:text-primary">Dampak Sosial</a>
+                <a href="contact.html" class="block mt-3 btn-primary text-center">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 hero-gradient text-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Hubungi Kami</h1>
+            <p class="text-xl text-cream/90 max-w-2xl">Kami siap membantu Anda memulai perjalanan belajar Islam atau berdonasi untuk dampak sosial kami</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <!-- Email -->
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 text-center border-2 border-primary/20">
+                    <div class="text-5xl mb-4">✉️</div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">Email</h3>
+                    <p class="text-dark-charcoal/70 mb-4">Hubungi kami melalui email untuk pertanyaan detail</p>
+                    <a href="mailto:info@kholas.academy" class="text-secondary font-bold hover:underline">info@kholas.academy</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-8 text-center border-2 border-secondary/30">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">WhatsApp</h3>
+                    <p class="text-dark-charcoal/70 mb-4">Chat langsung untuk respons cepat</p>
+                    <a href="https://wa.me/628123456789" target="_blank" class="text-secondary font-bold hover:underline">+62 812-3456-7890</a>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-8 text-center border-2 border-accent/20">
+                    <div class="text-5xl mb-4">🕐</div>
+                    <h3 class="text-2xl font-bold text-primary mb-2">Jam Operasional</h3>
+                    <p class="text-dark-charcoal/70">Senin - Jumat</p>
+                    <p class="font-bold text-primary text-lg">09:00 - 17:00 WIB</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-8">Form Kontak</h2>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-dark-charcoal font-semibold mb-2">Nama Lengkap</label>
+                            <input type="text" name="name" required placeholder="Masukkan nama Anda" class="w-full">
+                        </div>
+
+                        <div>
+                            <label class="block text-dark-charcoal font-semibold mb-2">Email</label>
+                            <input type="email" name="email" required placeholder="Masukkan email Anda" class="w-full">
+                        </div>
+
+                        <div>
+                            <label class="block text-dark-charcoal font-semibold mb-2">Nomor WhatsApp</label>
+                            <input type="tel" name="phone" required placeholder="Masukkan nomor WhatsApp" class="w-full">
+                        </div>
+
+                        <div>
+                            <label class="block text-dark-charcoal font-semibold mb-2">Topik</label>
+                            <select name="topic" required class="w-full border-2 border-primary/20 rounded-lg px-4 py-3 focus:outline-none focus:border-secondary transition-colors">
+                                <option value="">Pilih topik</option>
+                                <option value="program">Informasi Program</option>
+                                <option value="pendaftaran">Pendaftaran</option>
+                                <option value="donasi">Donasi/Sponsor</option>
+                                <option value="volunteer">Volunteer/Kolaborasi</option>
+                                <option value="pertanyaan">Pertanyaan Umum</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-dark-charcoal font-semibold mb-2">Pesan</label>
+                            <textarea name="message" required placeholder="Tulis pesan Anda di sini..." rows="6" class="w-full"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary text-center font-bold">Kirim Pesan</button>
+                    </form>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-8">Pertanyaan yang Sering Diajukan</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-cream rounded-2xl p-6 border-2 border-primary/20 cursor-pointer hover:border-secondary transition-colors" onclick="toggleFAQ(this)">
+                            <h3 class="font-bold text-primary mb-2 flex items-center justify-between">
+                                Bagaimana cara mendaftar program?
+                                <span class="text-secondary">+</span>
+                            </h3>
+                            <p class="text-dark-charcoal/70 hidden">Anda bisa mendaftar melalui form kontak di samping, WhatsApp, atau email kami. Kami akan mengirimkan informasi lengkap dan prosedur pendaftaran.</p>
+                        </div>
+
+                        <div class="bg-cream rounded-2xl p-6 border-2 border-primary/20 cursor-pointer hover:border-secondary transition-colors" onclick="toggleFAQ(this)">
+                            <h3 class="font-bold text-primary mb-2 flex items-center justify-between">
+                                Apakah ada trial atau demo class gratis?
+                                <span class="text-secondary">+</span>
+                            </h3>
+                            <p class="text-dark-charcoal/70 hidden">Ya, kami menawarkan satu kali sesi trial gratis untuk calon peserta. Hubungi kami untuk membuat jadwal trial session.</p>
+                        </div>
+
+                        <div class="bg-cream rounded-2xl p-6 border-2 border-primary/20 cursor-pointer hover:border-secondary transition-colors" onclick="toggleFAQ(this)">
+                            <h3 class="font-bold text-primary mb-2 flex items-center justify-between">
+                                Bagaimana jika saya terlambat membayar?
+                                <span class="text-secondary">+</span>
+                            </h3>
+                            <p class="text-dark-charcoal/70 hidden">Hubungi kami untuk menjelaskan situasi Anda. Kami memiliki opsi cicilan dan sistem pembayaran fleksibel untuk membantu peserta yang terkendala finansial.</p>
+                        </div>
+
+                        <div class="bg-cream rounded-2xl p-6 border-2 border-primary/20 cursor-pointer hover:border-secondary transition-colors" onclick="toggleFAQ(this)">
+                            <h3 class="font-bold text-primary mb-2 flex items-center justify-between">
+                                Bagaimana cara berdonasi?
+                                <span class="text-secondary">+</span>
+                            </h3>
+                            <p class="text-dark-charcoal/70 hidden">Anda bisa mengirim donasi melalui transfer bank, e-wallet, atau metode pembayaran lainnya. Hubungi kami untuk mendapatkan nomor rekening dan informasi lengkap.</p>
+                        </div>
+
+                        <div class="bg-cream rounded-2xl p-6 border-2 border-primary/20 cursor-pointer hover:border-secondary transition-colors" onclick="toggleFAQ(this)">
+                            <h3 class="font-bold text-primary mb-2 flex items-center justify-between">
+                                Apakah peserta bisa mengikuti lebih dari satu program?
+                                <span class="text-secondary">+</span>
+                            </h3>
+                            <p class="text-dark-charcoal/70 hidden">Tentu saja! Banyak peserta kami yang mengambil 2-3 program sekaligus. Kami punya paket bundling dengan harga spesial untuk multiple programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation CTA -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Dukung Misi Pendidikan Islam Kami</h2>
+            <p class="text-xl text-cream/90 mb-8">Donasi Anda membantu kami memberikan akses pendidikan Islam berkualitas untuk generasi muda yang membutuhkan</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('donationModal').classList.remove('hidden')" class="px-8 py-4 bg-cream text-primary rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all">Donasi Sekarang</button>
+                <button onclick="alert('Hubungi kami untuk informasi sponsorship perusahaan')" class="px-8 py-4 border-2 border-cream text-cream rounded-lg font-bold text-lg hover:bg-cream/10 transition-all">Corporate Sponsorship</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-charcoal text-cream py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Kholas Academy</h3>
+                    <p class="text-cream/70">Platform pembelajaran Islam untuk generasi muda yang serius</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Program</h4>
+                    <ul class="space-y-2 text-cream/70">
+                        <li><a href="index.html#programs" class="hover:text-secondary">Bahasa Arab</a></li>
+                        <li><a href="index.html#programs" class="hover:text-secondary">Quranic Studies</a></li>
+                        <li><a href="index.html#programs" class="hover:text-secondary">Fiqh</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-cream/70">
+                        <li><a href="about.html" class="hover:text-secondary">Tentang</a></li>
+                        <li><a href="index.html#impact" class="hover:text-secondary">Dampak Sosial</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary">Hubungi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontak</h4>
+                    <p class="text-cream/70 mb-2">Email: info@kholas.academy</p>
+                    <p class="text-cream/70 mb-2">WhatsApp: +62 812-3456-7890</p>
+                    <p class="text-cream/70">Jam Kerja: 09:00 - 17:00 WIB</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-cream/20 pt-8">
+                <div class="text-center text-cream/60">
+                    <p>&copy; 2024 Kholas Academy. Semua hak dilindungi.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full">
+            <div class="bg-primary text-cream p-6 flex justify-between items-center">
+                <h2 class="text-2xl font-bold">Kirim Donasi</h2>
+                <button onclick="document.getElementById('donationModal').classList.add('hidden')" class="text-2xl hover:opacity-70">✕</button>
+            </div>
+            <div class="p-6 space-y-6">
+                <p class="text-dark-charcoal/70">Pilih nominal donasi atau masukkan nominal custom Anda:</p>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="border-2 border-secondary text-secondary rounded-lg py-3 font-bold hover:bg-secondary hover:text-cream transition-all">Rp 50.000</button>
+                    <button class="border-2 border-secondary text-secondary rounded-lg py-3 font-bold hover:bg-secondary hover:text-cream transition-all">Rp 100.000</button>
+                    <button class="border-2 border-secondary text-secondary rounded-lg py-3 font-bold hover:bg-secondary hover:text-cream transition-all">Rp 250.000</button>
+                    <button class="border-2 border-secondary text-secondary rounded-lg py-3 font-bold hover:bg-secondary hover:text-cream transition-all">Rp 500.000</button>
+                </div>
+
+                <div>
+                    <input type="number" placeholder="Nominal custom" class="w-full border-2 border-primary/20 rounded-lg px-4 py-3 focus:border-secondary focus:outline-none">
+                </div>
+
+                <div class="bg-cream rounded-lg p-4">
+                    <p class="text-sm text-dark-charcoal/60 mb-2">Metode Pembayaran:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="payment" checked> Bank Transfer
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="payment"> E-Wallet
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="alert('Silakan hubungi kami melalui WhatsApp atau email untuk detail donasi.')" class="w-full btn-primary text-center">Lanjutkan Donasi</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const phone = this.querySelector('input[name="phone"]').value;
+            const topic = this.querySelector('select[name="topic"]').value;
+            const message = this.querySelector('textarea[name="message"]').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Halo Kholas Academy, saya ingin menghubungi Anda.\nNama: ${name}\nEmail: ${email}\nTopik: ${topic}\nPesan: ${message}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/628123456789?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            this.reset();
+            alert('Pesan Anda akan dikirim melalui WhatsApp. Terima kasih!');
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const paragraph = element.querySelector('p');
+            paragraph.classList.toggle('hidden');
+        }
+
+        // Close donation modal when clicking outside
+        document.getElementById('donationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

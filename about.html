@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3d2817">
+    <title>Tentang Kholas Academy - Sejarah & Misi</title>
+    <meta name="description" content="Pelajari tentang Kholas Academy - visi, misi, dan dampak sosial kami dalam pendidikan Islam untuk generasi muda.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3d2817',
+                        secondary: '#d4a574',
+                        accent: '#5a7a6e',
+                        cream: '#f5f1ed',
+                        'dark-charcoal': '#2a2a2a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f1ed;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a574;
+            border-radius: 5px;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(61, 40, 23, 0.95) 0%, rgba(212, 165, 116, 0.85) 100%);
+        }
+        
+        .btn-primary {
+            @apply px-6 py-3 bg-primary text-cream rounded-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-200;
+        }
+    </style>
+</head>
+<body class="bg-cream text-dark-charcoal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-cream font-bold">K</span>
+                    </div>
+                    <a href="index.html" class="font-bold text-primary">Kholas Academy</a>
+                </div>
+                
+                <div id="hamburger" class="md:hidden cursor-pointer">
+                    <div class="space-y-1">
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                        <div class="w-6 h-0.5 bg-primary"></div>
+                    </div>
+                </div>
+                
+                <div id="navMenu" class="hidden md:flex items-center gap-8">
+                    <a href="index.html#programs" class="text-dark-charcoal hover:text-primary font-medium">Program</a>
+                    <a href="about.html" class="text-dark-charcoal hover:text-primary font-medium">Tentang</a>
+                    <a href="index.html#impact" class="text-dark-charcoal hover:text-primary font-medium">Dampak Sosial</a>
+                    <a href="contact.html" class="btn-primary">Hubungi Kami</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html#programs" class="block py-2 text-dark-charcoal hover:text-primary">Program</a>
+                <a href="about.html" class="block py-2 text-dark-charcoal hover:text-primary">Tentang</a>
+                <a href="index.html#impact" class="block py-2 text-dark-charcoal hover:text-primary">Dampak Sosial</a>
+                <a href="contact.html" class="block mt-3 btn-primary text-center">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 hero-gradient text-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h1 class="text-5xl font-bold mb-6 leading-tight">Sejarah & Misi Kholas Academy</h1>
+            <p class="text-xl text-cream/90 max-w-2xl">Membangun komunitas pembelajaran Islam yang serius dan berdampak sosial</p>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-primary mb-6">Asal Mula Kholas Academy</h2>
+                    <div class="space-y-6 text-dark-charcoal/80">
+                        <p>Kholas Academy dimulai dari passion seorang individu yang memiliki kemampuan bahasa Arab yang cukup baik namun terkendala oleh berbagai hal dalam mendalami pendidikan Islam lebih lanjut.</p>
+                        
+                        <p>Dari pengalaman tersebut, muncul keinginan untuk mengajak teman-teman dan orang-orang di sekitar yang memiliki nasib serupa - ingin belajar Islam dengan serius tetapi merasa terisolasi dalam perjalanan intelektual mereka.</p>
+                        
+                        <p>Maka terlahirlah Kholas Academy - bukan hanya sebagai tempat pembelajaran online biasa, tetapi sebagai komunitas yang berkomitmen untuk mengembalikan atmosfer belajar bersama intelektual sejati, sambil juga membawa dampak sosial nyata kepada masyarakat sekitar.</p>
+                        
+                        <p>Visi kami adalah menciptakan generasi muda Muslim yang tidak hanya mendalam ilmunya, tetapi juga peka terhadap kebutuhan masyarakat dan siap berkontribusi nyata untuk perbaikan umat.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="quran-study.jpg" alt="Islamic Study" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-primary text-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Misi Kami</h2>
+                    <p class="text-lg text-cream/90 leading-relaxed">
+                        Menyediakan platform pembelajaran Islam yang berkualitas tinggi, terstruktur, dan accessible untuk generasi muda (15-30 tahun) yang ingin mendalami ilmu agama dari tingkat dasar hingga pengambilan sanad, sambil membangun komunitas intelektual yang solid dan berdampak sosial.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Visi Kami</h2>
+                    <p class="text-lg text-cream/90 leading-relaxed">
+                        Menjadi lembaga pendidikan Islam terdepan yang melahirkan generasi Muslim yang berpengetahuan mendalam, berakhlak mulia, dan memiliki kepedulian sosial untuk membangun masyarakat yang lebih baik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-primary text-center mb-16">Nilai-Nilai Inti Kami</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-cream rounded-2xl p-8 border-2 border-primary/20 text-center">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Kedalaman Ilmu</h3>
+                    <p class="text-dark-charcoal/70">Kami berkomitmen pada pembelajaran Islam yang mendalam, terstruktur, dan berkelanjutan dari sumber-sumber otoritatif.</p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 border-2 border-secondary/30 text-center">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Komunitas Serius</h3>
+                    <p class="text-dark-charcoal/70">Membangun atmosfer belajar bersama intelektual yang memiliki motivasi sama untuk mendalami ilmu Agama.</p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 border-2 border-accent/20 text-center">
+                    <div class="text-5xl mb-4">💝</div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Dampak Sosial</h3>
+                    <p class="text-dark-charcoal/70">Setiap pembelajaran harus membawa manfaat bagi masyarakat. Kami tidak hanya belajar, tetapi juga berbagi dan memberdayakan.</p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 border-2 border-primary/20 text-center">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Integritas Ilmiah</h3>
+                    <p class="text-dark-charcoal/70">Menjaga kredibilitas ilmiah, transparansi dalam pembelajaran, dan etika akademik yang tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-cream text-center mb-16">Pencapaian Kami</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8 text-cream text-center">
+                <div class="bg-white/20 rounded-2xl p-8 backdrop-blur">
+                    <div class="text-5xl font-bold mb-3">500+</div>
+                    <p class="text-lg">Peserta Aktif</p>
+                    <p class="text-cream/70 text-sm mt-2">Dari berbagai kota di Indonesia</p>
+                </div>
+
+                <div class="bg-white/20 rounded-2xl p-8 backdrop-blur">
+                    <div class="text-5xl font-bold mb-3">50+</div>
+                    <p class="text-lg">Instruktur Berpengalaman</p>
+                    <p class="text-cream/70 text-sm mt-2">Dengan sanad dan kredibilitas terjaga</p>
+                </div>
+
+                <div class="bg-white/20 rounded-2xl p-8 backdrop-blur">
+                    <div class="text-5xl font-bold mb-3">100%</div>
+                    <p class="text-lg">Kepuasan Peserta</p>
+                    <p class="text-cream/70 text-sm mt-2">Rating dari review peserta aktif</p>
+                </div>
+
+                <div class="bg-white/20 rounded-2xl p-8 backdrop-blur">
+                    <div class="text-5xl font-bold mb-3">Rp 500M+</div>
+                    <p class="text-lg">Dana Sosial</p>
+                    <p class="text-cream/70 text-sm mt-2">Disalurkan untuk dampak sosial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Impact -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-primary text-center mb-16">Program Dampak Sosial Kami</h2>
+            
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="social-impact.jpg" alt="Scholarship Program" class="rounded-2xl w-full h-80 object-cover shadow-lg">
+                    <div>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Beasiswa Pendidikan</h3>
+                        <p class="text-dark-charcoal/70 mb-6">Memberikan kesempatan kepada 50+ generasi muda yang ingin belajar Islam tetapi terkendala finansial. Setiap tahun kami berkomitmen meningkatkan jumlah penerima beasiswa.</p>
+                        <div class="space-y-3">
+                            <p class="text-sm"><strong class="text-secondary">Target 2024:</strong> Rp 100 Juta</p>
+                            <p class="text-sm"><strong class="text-secondary">Target 2025:</strong> Rp 200 Juta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center md:grid-cols-2-reverse">
+                    <div>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Program Mengajar Sosial</h3>
+                        <p class="text-dark-charcoal/70 mb-6">Member Kholas Academy tidak hanya belajar, tetapi juga aktif mengajar Islam kepada anak-anak dan remaja di daerah-daerah yang membutuhkan. Setiap bulan ada 50+ peserta yang mendapat manfaat dari program ini.</p>
+                        <div class="space-y-3">
+                            <p class="text-sm"><strong class="text-accent">Peserta per bulan:</strong> 50+</p>
+                            <p class="text-sm"><strong class="text-accent">Daerah jangkauan:</strong> 15+ kota</p>
+                        </div>
+                    </div>
+                    <img src="learning-community.jpg" alt="Teaching Program" class="rounded-2xl w-full h-80 object-cover shadow-lg">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gradient-to-br from-secondary/20 to-accent/20 rounded-2xl p-8">
+                        <h3 class="text-3xl font-bold text-primary mb-4">Perpustakaan Digital Gratis</h3>
+                        <p class="text-dark-charcoal/70 mb-6">Menyediakan 500+ resource pembelajaran Islam berkualitas secara gratis untuk semua kalangan. Dari e-book, video pembelajaran, hingga podcast diskusi Islamic studies.</p>
+                        <div class="space-y-3">
+                            <p class="text-sm"><strong class="text-secondary">Resources tersedia:</strong> 500+</p>
+                            <p class="text-sm"><strong class="text-secondary">Akses:</strong> Gratis selamanya</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Mentorship Program</h3>
+                        <p class="text-dark-charcoal/70 mb-6">Menghubungkan peserta dengan mentor yang berpengalaman untuk guidance personal dalam perjalanan belajar Islam mereka. Program ini telah membantu 100+ mentee mencapai tujuan akademik mereka.</p>
+                        <div class="space-y-3">
+                            <p class="text-sm"><strong class="text-accent">Mentee terbantu:</strong> 100+</p>
+                            <p class="text-sm"><strong class="text-accent">Completion rate:</strong> 95%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-primary text-center mb-16">Tim Kholas Academy</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-primary/20">
+                    <div class="h-48 bg-gradient-to-br from-primary to-secondary"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">Ana (Founder)</h3>
+                        <p class="text-secondary font-semibold">Arabic Language Enthusiast & Islamic Scholar</p>
+                        <p class="text-dark-charcoal/70 mt-3">Pendiri Kholas Academy dengan passion mendalam tentang pendidikan Islam yang berkualitas dan komunitas yang kuat.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-secondary/20">
+                    <div class="h-48 bg-gradient-to-br from-secondary to-accent"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">Koordinator Program</h3>
+                        <p class="text-secondary font-semibold">Program Management</p>
+                        <p class="text-dark-charcoal/70 mt-3">Mengelola semua program pembelajaran dan memastikan kualitas pendidikan tetap terjaga dengan baik.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-accent/20">
+                    <div class="h-48 bg-gradient-to-br from-accent to-primary"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary">Tim Sosial</h3>
+                        <p class="text-secondary font-semibold">Community & Social Impact</p>
+                        <p class="text-dark-charcoal/70 mt-3">Menjalankan program dampak sosial dan memastikan pembelajaran kami membawa manfaat nyata ke masyarakat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Bergabunglah dengan Komunitas Kholas Academy</h2>
+            <p class="text-xl text-cream/90 mb-8">Jadilah bagian dari gerakan pembelajaran Islam yang serius dan berdampak sosial</p>
+            <a href="contact.html" class="inline-block px-8 py-4 bg-cream text-primary rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all">Hubungi Kami Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-charcoal text-cream py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Kholas Academy</h3>
+                    <p class="text-cream/70">Platform pembelajaran Islam untuk generasi muda yang serius</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Program</h4>
+                    <ul class="space-y-2 text-cream/70">
+                        <li><a href="index.html#programs" class="hover:text-secondary">Bahasa Arab</a></li>
+                        <li><a href="index.html#programs" class="hover:text-secondary">Quranic Studies</a></li>
+                        <li><a href="index.html#programs" class="hover:text-secondary">Fiqh</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-cream/70">
+                        <li><a href="about.html" class="hover:text-secondary">Tentang</a></li>
+                        <li><a href="index.html#impact" class="hover:text-secondary">Dampak Sosial</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary">Hubungi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Kontak</h4>
+                    <p class="text-cream/70 mb-2">Email: info@kholas.academy</p>
+                    <p class="text-cream/70 mb-2">WhatsApp: +62 812-3456-7890</p>
+                    <p class="text-cream/70">Jam Kerja: 09:00 - 17:00 WIB</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-cream/20 pt-8">
+                <div class="text-center text-cream/60">
+                    <p>&copy; 2024 Kholas Academy. Semua hak dilindungi.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
