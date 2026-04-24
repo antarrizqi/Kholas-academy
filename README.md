@@ -5,7 +5,7 @@ Website pure vanilla HTML, CSS, dan JavaScript untuk Kholas Academy - platform p
 ## Teknologi
 
 - **HTML5** - Semantic markup
-- **Tailwind CSS v4** - Via CDN (tidak perlu build/npm)
-- **Vanilla JavaScript** - Pure JS tanpa framework
+- **Tailwind CSS v4** - Via CDN 
+- **Vanilla JavaScript** 
 - **Responsive Design** - Mobile-first approach
 - **Zero Dependencies** - Bisa dibuka langsung di browser
